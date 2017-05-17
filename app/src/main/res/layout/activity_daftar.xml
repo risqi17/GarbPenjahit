@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.risqi17.garbpenjahit.Daftar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:id="@+id/relativeLayout">
+
+
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="100dp"
+            android:text="Register,"
+            android:textSize="25sp"
+            android:textColor="@color/text"/>
+
+
+        <EditText
+            android:id="@+id/edUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="75dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Username"
+            android:backgroundTint="@color/text"
+            android:textColor="@color/text"
+            android:textColorHint="@color/text"
+            android:layout_below="@id/textView5"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/edNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edUser"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Nama"
+            android:textColor="@color/text"
+            android:backgroundTint="@color/text"
+            android:textColorHint="@color/text"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true" />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/edNama"
+            android:layout_marginTop="20dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/radiojk">
+            <RadioButton android:id="@+id/radioL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laki-laki"
+                android:backgroundTint="@color/text"
+                android:textColorHint="@color/text"
+                android:textColor="@color/text"
+                />
+            <RadioButton android:id="@+id/radioP"
+                android:backgroundTint="@color/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perempuan"
+                android:textColor="@color/text"
+                />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/edEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radiojk"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Email"
+            android:backgroundTint="@color/text"
+            android:textColor="@color/text"
+            android:textColorHint="@color/text"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true" />
+        <EditText
+            android:id="@+id/edPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edEmail"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="Password"
+            android:backgroundTint="@color/text"
+            android:textColor="@color/text"
+            android:inputType="textPassword"
+            android:textColorHint="@color/text"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:textColor="@color/text"
+            android:background="@color/button"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/edPass"
+            android:layout_marginTop="10dp"
+            android:id="@+id/register" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sudah punya akun ?"
+            android:textColor="@color/text"
+            android:layout_below="@+id/register"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:id="@+id/txSignIn"/>
+
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>
