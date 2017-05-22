@@ -23,10 +23,6 @@
     <item android:title="Lainnya">
         <menu>
             <item
-                android:id="@+id/nav_setting"
-                android:icon="@drawable/ic_menu_manage"
-                android:title="Setting" />
-            <item
                 android:id="@+id/nav_logout"
                 android:icon="@drawable/ic_input_black_24dp"
                 android:title="Logout" />

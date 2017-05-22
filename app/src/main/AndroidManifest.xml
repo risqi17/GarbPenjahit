@@ -48,8 +48,10 @@
 
         </activity>
 
-        <activity android:name=".Pesanan" />
-        <activity android:name=".komplain"></activity>
+        <activity android:name=".Pesanan"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".komplain"
+            android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>

@@ -147,12 +147,15 @@ public class MainActivity extends AppCompatActivity
             startActivity(i);
 
         } else if (id == R.id.nav_pesanan) {
+            Intent i = new Intent(getApplicationContext(), Pesanan.class);
+            startActivity(i);
 
         } else if (id == R.id.nav_komplain) {
+            Intent i = new Intent(getApplicationContext(), komplain.class);
+            startActivity(i);
 
-        } else if (id == R.id.nav_setting) {
-
-        } else if (id == R.id.nav_logout) {
+        }  else if (id == R.id.nav_logout) {
+            logout();
 
         } else if (id == R.id.nav_keluar) {
             finish();
