@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -18,9 +20,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.risqi17.garbpenjahit.Recycler.RecyclerAdapter;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    //deklarasi variabel reyclerview
+    RecyclerView recyclerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +42,19 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        //recyclerview
+        recyclerView= (RecyclerView) findViewById(R.id.recycler_view);
+        //menampilkan reyclerview yang ada pada file layout dengan id reycler view
+
+        RecyclerAdapter adapter=new RecyclerAdapter(this);
+        //membuat adapter baru untuk reyclerview
+        recyclerView.setAdapter(adapter);
+        //menset nilai dari adapter
+        recyclerView.setHasFixedSize(true);
+        //menset setukuran
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
     //Logout function
@@ -124,6 +143,8 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_home) {
             // Handle the camera action
         } else if (id == R.id.nav_akun) {
+            Intent i = new Intent(getApplicationContext(), ProfilPenjahit.class);
+            startActivity(i);
 
         } else if (id == R.id.nav_pesanan) {
 
@@ -134,6 +155,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_logout) {
 
         } else if (id == R.id.nav_keluar) {
+            finish();
 
     }
 

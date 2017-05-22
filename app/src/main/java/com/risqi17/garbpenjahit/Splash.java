@@ -17,7 +17,10 @@ public class Splash extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager. LayoutParams.FLAG_FULLSCREEN);
+
+
         setContentView(R.layout.activity_splash);
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

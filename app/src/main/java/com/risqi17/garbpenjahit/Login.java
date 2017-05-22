@@ -42,6 +42,10 @@ public class Login extends Activity implements View.OnClickListener {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager. LayoutParams.FLAG_FULLSCREEN);
+
+
+
+
         setContentView(R.layout.activity_login);
 
         etUsername = (EditText)findViewById(R.id.edUser);
@@ -53,7 +57,7 @@ public class Login extends Activity implements View.OnClickListener {
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), Daftar.class);
                 startActivity(i);
-                finish();
+
             }
         });
         lupa = (TextView)findViewById(R.id.txLupa);
@@ -62,7 +66,6 @@ public class Login extends Activity implements View.OnClickListener {
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), LupaPassword.class);
                 startActivity(i);
-                finish();
             }
         });
         button = (Button)findViewById(R.id.button);
@@ -92,6 +95,7 @@ public class Login extends Activity implements View.OnClickListener {
             //We will start the Profile Activity
             Intent intent = new Intent(Login.this, MainActivity.class);
             startActivity(intent);
+            finish();
         }
     }
 
@@ -123,6 +127,7 @@ public class Login extends Activity implements View.OnClickListener {
                             //Starting profile activity
                             Intent intent = new Intent(Login.this, MainActivity.class);
                             startActivity(intent);
+                            finish();
                         }else{
                             //If the server response is not success
                             //Displaying an error message on toast

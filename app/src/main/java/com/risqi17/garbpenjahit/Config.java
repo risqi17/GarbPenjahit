@@ -6,10 +6,11 @@ package com.risqi17.garbpenjahit;
 
 public class Config {
     //URL to our login.php file
-    String IP = "192.168.1.32";
-    public static final String LOGIN_URL = "http://192.168.1.43/Garb/API/penjahitLogin.php";
+    public static String IP = "192.168.1.43";
+    public static final String LOGIN_URL = "http://"+IP+"/Garb/API/penjahitLogin.php";
     public static final String REGISTER_URL = "http://192.168.1.43/Garb/API/penjahitRegister.php";
     public static final String LUPA_PASSWORD_URL = "http://192.168.1.43/Garb/API/penjahitLupaPassword.php";
+    public static final String SARAN_URL = "http://"+IP+"/Garb/API/saran.php";
 
     //LOGIN
     //Keys for email and password as defined in our $_POST['key'] in login.php
