@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="10dp"
+    android:foreground="?attr/selectableItemBackground"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/daftar_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/shirt" />
+
+        <TextView
+            android:id="@+id/textViewId"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/daftar_icon"
+            android:text="Daftar Judul"
+            android:textColor="#000000"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewId"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/daftar_icon"
+            android:textColor="#000000"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textViewUkuran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="43dp"
+            android:text="M"
+            android:textSize="30sp"/>
+
+        <Button
+            android:id="@+id/btAccept"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewName"
+            android:text="Terima"
+            android:background="@color/b"
+            android:textColor="@color/text"
+            android:layout_marginTop="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"/>
+
+        <Button
+            android:id="@+id/btDetail"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewName"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_toStartOf="@+id/textViewUkuran"
+            android:text="Detail"
+            android:background="@color/a"
+            android:textColor="@color/text"
+            android:layout_alignParentBottom="true"
+            />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

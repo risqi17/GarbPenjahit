@@ -2,9 +2,11 @@
 <resources>
     <color name="colorPrimary">#416e81</color>
     <color name="colorPrimaryDark">#43626f</color>
-    <color name="colorAccent">#FFF</color>
+    <color name="colorAccent">#000</color>
     <color name="bgSplash">#395e5c</color>
     <color name="text">#FFF</color>
     <color name="button">#09bbcf</color>
     <color name="bt1">#2972fa</color>
+    <color name="a">#c42754</color>
+    <color name="b">#0094bc</color>
 </resources>

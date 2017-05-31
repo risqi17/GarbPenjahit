@@ -19,14 +19,22 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+import android.widget.Toast;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.risqi17.garbpenjahit.JSON.CustomListPesanan;
+import com.risqi17.garbpenjahit.JSON.ParseJSONPesanan;
 import com.risqi17.garbpenjahit.Recycler.RecyclerAdapter;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    //deklarasi variabel reyclerview
-    RecyclerView recyclerView;
+    ListView listView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,18 +51,29 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        listView = (ListView)findViewById(R.id.listview);StringRequest stringRequest = new StringRequest(Config.JSON_GET_PESANAN,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        showJSON(response);
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(MainActivity.this,error.getMessage(),Toast.LENGTH_LONG).show();
+                    }
+                });
 
-        //recyclerview
-        recyclerView= (RecyclerView) findViewById(R.id.recycler_view);
-        //menampilkan reyclerview yang ada pada file layout dengan id reycler view
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
+    }
 
-        RecyclerAdapter adapter=new RecyclerAdapter(this);
-        //membuat adapter baru untuk reyclerview
-        recyclerView.setAdapter(adapter);
-        //menset nilai dari adapter
-        recyclerView.setHasFixedSize(true);
-        //menset setukuran
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    private void showJSON(String json){
+        ParseJSONPesanan pj = new ParseJSONPesanan(json);
+        pj.parseJSON();
+        CustomListPesanan cl = new CustomListPesanan(this, ParseJSONPesanan.ids, ParseJSONPesanan.models, ParseJSONPesanan.ukurans);
+        listView.setAdapter(cl);
     }
 
     //Logout function
@@ -145,11 +164,6 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_akun) {
             Intent i = new Intent(getApplicationContext(), ProfilPenjahit.class);
             startActivity(i);
-
-        } else if (id == R.id.nav_pesanan) {
-            Intent i = new Intent(getApplicationContext(), Pesanan.class);
-            startActivity(i);
-
         } else if (id == R.id.nav_komplain) {
             Intent i = new Intent(getApplicationContext(), komplain.class);
             startActivity(i);

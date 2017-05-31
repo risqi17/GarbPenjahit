@@ -7,24 +7,29 @@
     android:padding="@dimen/activity_horizontal_margin"
     tools:context="com.risqi17.garbpenjahit.komplain">
 
-
+<android.support.design.widget.TextInputLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentEnd="true"
+    android:layout_marginTop="30dp"
+    android:id="@+id/satu"
+    android:layout_alignParentTop="true">
     <EditText
         android:id="@+id/etSaran"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="30dp"
         android:ems="10"
         android:inputType="textImeMultiLine"
         android:hint="Kritik dan Saran" />
+</android.support.design.widget.TextInputLayout>
 
     <Button
         android:id="@+id/btSaran"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_below="@+id/etSaran"
+        android:layout_below="@+id/satu"
         android:layout_marginEnd="15dp"
         android:layout_marginTop="16dp"
         android:background="@color/button"

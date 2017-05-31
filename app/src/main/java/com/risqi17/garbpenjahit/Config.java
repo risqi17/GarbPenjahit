@@ -7,10 +7,12 @@ package com.risqi17.garbpenjahit;
 public class Config {
     //URL to our login.php file
     public static final String IP = "garb.hol.es/API";
+    public static final String IP2 = "192.168.1.14/Garb/API";
     public static final String LOGIN_URL = "http://"+IP+"/penjahitLogin.php";
     public static final String REGISTER_URL = "http://"+IP+"/penjahitRegister.php";
     public static final String LUPA_PASSWORD_URL = "http://"+IP+"/penjahitLupaPassword.php";
     public static final String SARAN_URL = "http://"+IP+"/saran.php";
+    public static final String JSON_GET_PESANAN = "http://"+IP+"/userGetPesanan.php";
 
     //LOGIN
     //Keys for email and password as defined in our $_POST['key'] in login.php

@@ -11,13 +11,9 @@
             android:icon="@drawable/ic_account_circle_black_24dp"
             android:title="Akun" />
         <item
-            android:id="@+id/nav_pesanan"
-            android:icon="@drawable/ic_shopping_cart_black_24dp"
-            android:title="Pesanan" />
-        <item
             android:id="@+id/nav_komplain"
             android:icon="@drawable/ic_sync_black_24dp"
-            android:title="Komplain" />
+            android:title="Saran" />
     </group>
 
     <item android:title="Lainnya">
